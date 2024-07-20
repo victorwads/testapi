@@ -1,0 +1,28 @@
+{
+  "name": "ebanx-testapi",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorwads/testapi.git"
+  },
+  "author": "Victor Wads",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorwads/testapi/issues"
+  },
+  "homepage": "https://github.com/victorwads/testapi#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
