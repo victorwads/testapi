@@ -7,10 +7,10 @@ export default class BalanceController {
 
     constructor(accountService: AccountService) {
         this.accountService = accountService;
-        this.balance = this.balance.bind(this);
+        this.handleRequest = this.handleRequest.bind(this);
     }
 
-    balance(req: Request, res: Response) {
+    handleRequest(req: Request, res: Response) {
         const accountId = req.query.account_id as string;
         const balance = this.accountService.getBalance(accountId);
         if (balance !== null) {

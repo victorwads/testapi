@@ -13,8 +13,8 @@ let temp = (req: any, res: any) => {
     res.send('OK');
 }
 
-router.post('/reset', resetController.reset);
-router.get('/balance', balanceController.balance);
+router.post('/reset', resetController.handleRequest);
+router.get('/balance', balanceController.handleRequest);
 router.post('/event', temp);
 
 export default router;
