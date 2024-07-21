@@ -1,5 +1,5 @@
 interface EventRequest {
-    type: 'deposit' | 'withdrawal' | 'transfer';
+    type: 'deposit' | 'withdraw' | 'transfer';
     destination?: string;
     origin?: string;
     amount: number;
