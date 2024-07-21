@@ -7,6 +7,7 @@ export default class ResetController {
 
     constructor(accountService: AccountService) {
         this.accountService = accountService;
+        this.reset = this.reset.bind(this);
     }
 
     reset(request: Request, response: Response) {
