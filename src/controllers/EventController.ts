@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import AccountService from "../services/AccountService";
 
-export default class ResetController {
+export default class EventController {
 
     accountService: AccountService;
 
@@ -9,8 +9,7 @@ export default class ResetController {
         this.accountService = accountService;
     }
 
-    handleRequest = (request: Request, response: Response) => {
-        this.accountService.reset();
-        response.send('OK');
+    handleRequest = (req: Request, res: Response) => {
+        
     }
 }

@@ -1,20 +1,15 @@
-import { Router } from 'express';
+import e, { Router } from 'express';
 
 import MemoryAccountService from '../services/MemoryAccountService';
 import ResetController from '../controllers/ResetController';
 import BalanceController from '../controllers/BalanceController';
+import EventController from '../controllers/EventController';
+
+const accountService = new MemoryAccountService();
 
 const router = Router();
-const accountService = new MemoryAccountService();
-const resetController = new ResetController(accountService);
-const balanceController = new BalanceController(accountService);
-
-let temp = (req: any, res: any) => {
-    res.send('OK');
-}
-
-router.post('/reset', resetController.handleRequest);
-router.get('/balance', balanceController.handleRequest);
-router.post('/event', temp);
+router.post('/reset', new ResetController(accountService).handleRequest);
+router.get('/balance', new BalanceController(accountService).handleRequest);
+router.post('/event', new EventController(accountService).handleRequest);
 
 export default router;
